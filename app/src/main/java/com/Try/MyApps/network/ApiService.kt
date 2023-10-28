@@ -1,6 +1,6 @@
 package com.Try.MyApps.network
 
-import com.example.garapmaneh.model.ResponseUser
+import com.Try.MyApps.model.ResponseUser
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
