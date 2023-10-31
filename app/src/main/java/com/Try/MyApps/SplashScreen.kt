@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.Try.MyApps.databinding.ActivitySplashscreenBinding
-import com.Try.MyApps.ui.authentification.LoginActivity
+import com.Try.MyApps.SignInActivity
 
 class SplashScreen : AppCompatActivity() {
 
@@ -21,7 +21,7 @@ class SplashScreen : AppCompatActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed({
             // Ini pindah ke MainActivity_Login
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, SignInActivity::class.java))
             finish()
         }, 1500) // Delay selama 3 detik
     }
