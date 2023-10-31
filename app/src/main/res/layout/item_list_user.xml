@@ -46,7 +46,7 @@
             tools:text="@string/name" />
 
         <TextView
-            android:id="@+id/itemEmail"
+            android:id="@+id/itemGithub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#7E7E7E"
@@ -55,6 +55,21 @@
             app:layout_constraintStart_toEndOf="@+id/cardView"
             app:layout_constraintTop_toBottomOf="@+id/itemName"
             tools:text="@string/email" />
+
+        <ImageView
+            android:id="@+id/itemHeartIcon"
+            android:layout_width="59dp"
+            android:layout_height="49dp"
+            android:clickable="true"
+            android:onClick="onHeartIconClicked"
+            android:src="@drawable/ic_heart_gray"
+            android:contentDescription="Favorite Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.985"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.526" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

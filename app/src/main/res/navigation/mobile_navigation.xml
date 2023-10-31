@@ -4,26 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
-
-    <fragment
-        android:id="@+id/navigation_home3"
-        android:name="com.Try.MyApps.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/navigation_home2"
-        android:name="com.Try.MyApps.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.Try.MyApps.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_detailUserFragment"
+            app:destination="@id/detailUserFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.Try.MyApps.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/detailUserFragment"
+        android:name="com.Try.MyApps.ui.home.DetailUserFragment"
+        android:label="DetailUserFragment"
+        tools:layout="@layout/fragment_detail_user"/>
+
 </navigation>

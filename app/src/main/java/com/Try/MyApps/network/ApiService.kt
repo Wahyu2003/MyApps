@@ -1,5 +1,6 @@
 package com.Try.MyApps.network
 
+import com.Try.MyApps.model.GitHubUser
 import com.Try.MyApps.model.ResponseUser
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -10,6 +11,8 @@ interface ApiService {
     //get list users with query
     @GET("users")
     fun getListUsers(@Query("page") page: String): Call<ResponseUser>
+    @GET("users")
+    suspend fun getUsers(): List<GitHubUser>
 
     //get list user by id using path
     @GET("users/{id}")
