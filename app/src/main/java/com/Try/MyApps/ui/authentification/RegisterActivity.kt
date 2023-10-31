@@ -1,23 +1,23 @@
 package com.Try.MyApps.ui.authentification
 
-import android.content.Intent
-import android.os.Bundle
-import android.util.Patterns
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import com.Try.MyApps.R
-import com.Try.MyApps.database.User
-import com.Try.MyApps.database.UserDao
-import com.Try.MyApps.database.UserDatabase
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import java.util.concurrent.Executors
-class RegisterActivity : AppCompatActivity() {
+//import android.content.Intent
+//import android.os.Bundle
+//import android.util.Patterns
+//import android.widget.Button
+//import android.widget.EditText
+//import android.widget.Toast
+//import androidx.appcompat.app.AppCompatActivity
+//import com.Try.MyApps.R
+//import com.Try.MyApps.database.User
+//import com.Try.MyApps.database.UserDao
+//import com.Try.MyApps.database.UserDatabase
+//import kotlinx.coroutines.CoroutineScope
+//import kotlinx.coroutines.Dispatchers
+//import kotlinx.coroutines.GlobalScope
+//import kotlinx.coroutines.launch
+//import kotlinx.coroutines.withContext
+//import java.util.concurrent.Executors
+//class RegisterActivity : AppCompatActivity() {
 
 //    // Mendeklarasikan variabel untuk menyimpan instance dari UserDatabase dan UserDao
 //    private var userDatabase: UserDatabase? = null
@@ -99,4 +99,4 @@ class RegisterActivity : AppCompatActivity() {
 //                                            Toast.makeText(this, "Semua field harus diisi", Toast.LENGTH_SHORT).show()
 //                                        }
 //                                    }
-}
+//}

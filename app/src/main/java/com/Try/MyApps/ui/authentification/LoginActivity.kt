@@ -1,21 +1,21 @@
 package com.Try.MyApps.ui.authentification
 
-import android.content.Intent
-import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import com.Try.MyApps.MainActivity
-import com.Try.MyApps.R
-import com.Try.MyApps.database.UserDao
-import com.Try.MyApps.database.UserDatabase
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-
-class LoginActivity : AppCompatActivity() {
+//import android.content.Intent
+//import android.os.Bundle
+//import android.widget.Button
+//import android.widget.EditText
+//import android.widget.Toast
+//import androidx.appcompat.app.AppCompatActivity
+//import com.Try.MyApps.MainActivity
+//import com.Try.MyApps.R
+//import com.Try.MyApps.database.UserDao
+//import com.Try.MyApps.database.UserDatabase
+//import kotlinx.coroutines.CoroutineScope
+//import kotlinx.coroutines.Dispatchers
+//import kotlinx.coroutines.launch
+//import kotlinx.coroutines.withContext
+//
+//class LoginActivity : AppCompatActivity() {
 
     // Mendeklarasikan variabel untuk menyimpan instance dari UserDatabase dan UserDao
 //    private var userDatabase: UserDatabase? = null
@@ -76,4 +76,4 @@ class LoginActivity : AppCompatActivity() {
 //        // Menghapus instance dari UserDatabase
 //        UserDatabase.destroyInstance()
 //    }
-}
+//}
