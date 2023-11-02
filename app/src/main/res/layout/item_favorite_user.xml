@@ -8,7 +8,7 @@
         android:id="@+id/ivUserAvatar"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:src="@drawable/baseline_mosque_24" />
+        android:src="@drawable/splash_logo" />
 
     <TextView
         android:id="@+id/tvUserName"

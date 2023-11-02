@@ -13,7 +13,7 @@
         android:layout_height="300dp"
         android:layout_marginStart="16dp"
         android:contentDescription="@string/gambar_kurikulum_global"
-        android:src="@drawable/image_kurikulum_global"
+        android:src="@drawable/motion_gambar1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -53,7 +53,7 @@
         android:layout_width="0dp"
         android:layout_height="300dp"
         android:contentDescription="@string/gambar_belajar_fleksibel"
-        android:src="@drawable/image_belajar_fleksibel"
+        android:src="@drawable/motion_gambar2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -93,7 +93,7 @@
         android:layout_width="0dp"
         android:layout_height="300dp"
         android:contentDescription="@string/gambar_code_reviewer"
-        android:src="@drawable/image_code_review"
+        android:src="@drawable/motion_gambar3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -133,7 +133,7 @@
         android:layout_width="0dp"
         android:layout_height="300dp"
         android:contentDescription="@string/gambar_alumni_terpercaya"
-        android:src="@drawable/image_alumni_terpercaya"
+        android:src="@drawable/motion_gambar4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -179,7 +179,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
         app:srcCompat="@drawable/ic_circle_24"
-        app:tint="@color/pink" />
+        app:tint="@color/blue" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/menu2"
@@ -193,7 +193,7 @@
         app:layout_constraintTop_toTopOf="@+id/menu1"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_circle_24"
-        app:tint="@color/pink" />
+        app:tint="@color/blue" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/menu3"
@@ -207,7 +207,7 @@
         app:layout_constraintTop_toTopOf="@+id/menu2"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_circle_24"
-        app:tint="@color/pink" />
+        app:tint="@color/blue" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/menu4"
@@ -221,7 +221,7 @@
         app:layout_constraintTop_toTopOf="@+id/menu3"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_circle_24"
-        app:tint="@color/pink" />
+        app:tint="@color/blue" />
 
     <Button
         android:id="@+id/button"
@@ -244,6 +244,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/image_dicoding" />
+        app:srcCompat="@drawable/motion_logo_polije" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
