@@ -87,6 +87,8 @@ dependencies {
     implementation("androidx.annotation:annotation:1.7.0")
     implementation ("com.google.android.material:material:1.4.0")
 
+    androidTestImplementation("androidx.test:runner:1.5.2")
+
 
     val room_version = "2.6.0"
 
