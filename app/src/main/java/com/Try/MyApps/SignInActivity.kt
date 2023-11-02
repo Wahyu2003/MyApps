@@ -24,44 +24,38 @@ class SignInActivity : AppCompatActivity() {
         // Use view binding to inflate the layout and set the content view
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        val registerhref = findViewById<TextView>(R.id.RegisterText)
+        registerhref.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+        }
         // Initialize the database reference by getting an instance of FirebaseDatabase and a child reference of "users"
         firebaseDatabase = FirebaseDatabase.getInstance()
         databaseReference = firebaseDatabase.reference.child("users")
-
-        // Initialize the auth by getting an instance of FirebaseAuth
         firebaseAuth = FirebaseAuth.getInstance()
-        val registerbutton = findViewById<TextView>(R.id.RegisterText)
-        registerbutton.setOnClickListener {
-            val intent = Intent(this, SignUpActivity::class.java)
-            startActivity(intent)
 
-            // Add a click listener for the login button that will call the loginUser method with the email and password from the EditTexts
-            binding.loginbutton.setOnClickListener {
-                val email = binding.email.text.toString()
-                val password = binding.password.text.toString()
+        // Add a click listener for the login button that will call the loginUser method with the email and password from the EditTexts
+        binding.loginbutton.setOnClickListener {
+            val email = binding.email.text.toString()
+            val password = binding.password.text.toString()
 
-                // Create a Regex pattern for email validation
-                val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+".toRegex()
+            // Create a Regex pattern for email validation
+            val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+".toRegex()
 
-                // Check if the email matches the pattern
-                if (!email.matches(emailPattern)) {
-                    // If not, show a toast message
-                    Toast.makeText(this@SignInActivity, "Email tidak valid", Toast.LENGTH_SHORT)
-                        .show()
-                    // Return from the function
-                    return@setOnClickListener
-                }
-
-                if (email.isNotEmpty() && password.isNotEmpty()) {
-                    loginUser(email, password)
-                } else {
-                    Toast.makeText(this@SignInActivity, "invalid", Toast.LENGTH_SHORT).show()
-                }
+            // Check if the email matches the pattern
+            if (!email.matches(emailPattern)) {
+                // If not, show a toast message
+                Toast.makeText(this@SignInActivity, "Email tidak valid", Toast.LENGTH_SHORT).show()
+                // Return from the function
+                return@setOnClickListener
+            }
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                loginUser(email, password)
+            } else {
+                Toast.makeText(this@SignInActivity, "invalid", Toast.LENGTH_SHORT).show()
             }
         }
     }
-
         private fun loginUser(email: String, password: String) {
             // Masuk dengan email dan password di Firebase Authentication
             firebaseAuth.signInWithEmailAndPassword(email, password)
@@ -88,9 +82,6 @@ class SignInActivity : AppCompatActivity() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
-
-
                 }
-
         }
-}
+    }
