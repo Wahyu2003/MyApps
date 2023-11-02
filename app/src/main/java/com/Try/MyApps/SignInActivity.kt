@@ -15,8 +15,6 @@ class SignInActivity : AppCompatActivity() {
     private lateinit var databaseReference: DatabaseReference
     private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var binding: ActivitySignInBinding
-
-    // variabel untuk autentikasi firebase
     private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,12 +37,9 @@ class SignInActivity : AppCompatActivity() {
             val email = binding.email.text.toString()
             val password = binding.password.text.toString()
 
-            // Create a Regex pattern for email validation
             val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+".toRegex()
 
-            // Check if the email matches the pattern
             if (!email.matches(emailPattern)) {
-                // If not, show a toast message
                 Toast.makeText(this@SignInActivity, "Email tidak valid", Toast.LENGTH_SHORT).show()
                 // Return from the function
                 return@setOnClickListener

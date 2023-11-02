@@ -5,4 +5,6 @@
     <string name="name">Nama</string>
     <string name="email">Email</string>
     <string name="avatar">image</string>
+    <string name="password_hint">Password</string>
+
 </resources>
