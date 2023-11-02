@@ -27,9 +27,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.authentification.LoginActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="false" />
     </application>

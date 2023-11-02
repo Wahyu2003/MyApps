@@ -1,9 +1,11 @@
 package com.Try.MyApps
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.Try.MyApps.database.User
 import com.google.firebase.FirebaseApp
@@ -34,6 +36,7 @@ class SignUpActivity : AppCompatActivity() {
         btnregister = findViewById(R.id.btnRegister)
         // inisialisasi database dengan child "users"
         database = FirebaseDatabase.getInstance().getReference("users")
+
 
         // menambahkan listener untuk button sign up
         btnregister.setOnClickListener {
@@ -71,6 +74,11 @@ class SignUpActivity : AppCompatActivity() {
 
             // menyimpan user ke database dengan username sebagai key
             database.child(username).setValue(user)
+        }
+        val Loginhref = findViewById<TextView>(R.id.LoginText)
+        Loginhref.setOnClickListener {
+            val intent = Intent(this, SignInActivity::class.java)
+            startActivity(intent)
         }
     }
 }
