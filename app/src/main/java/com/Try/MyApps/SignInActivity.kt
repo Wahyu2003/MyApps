@@ -22,6 +22,7 @@ class SignInActivity : AppCompatActivity() {
         // Use view binding to inflate the layout and set the content view
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
         val registerhref = findViewById<TextView>(R.id.RegisterText)
         registerhref.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
@@ -34,8 +35,8 @@ class SignInActivity : AppCompatActivity() {
 
         // Add a click listener for the login button that will call the loginUser method with the email and password from the EditTexts
         binding.loginbutton.setOnClickListener {
-            val email = binding.email.text.toString()
-            val password = binding.password.text.toString()
+            val email = binding.inputemail.text.toString()
+            val password = binding.inputPass.text.toString()
 
             val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+".toRegex()
 

@@ -28,6 +28,7 @@ class SignUpActivity : AppCompatActivity() {
         FirebaseApp.initializeApp(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
+        supportActionBar?.hide()
         val Loginhref = findViewById<TextView>(R.id.LoginText)
         Loginhref.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
