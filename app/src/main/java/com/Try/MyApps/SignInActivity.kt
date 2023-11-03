@@ -64,7 +64,7 @@ class SignInActivity : AppCompatActivity() {
                             Toast.LENGTH_SHORT
                         ).show()
                         // Membuat intent untuk membuka MainActivity
-                        val intent = Intent(this@SignInActivity, MainActivity::class.java)
+                        val intent = Intent(this@SignInActivity, ProfileActivity::class.java)
                         // Mengirimkan data user ke MainActivity
                         intent.putExtra("email", email)
                         intent.putExtra("password", password)
