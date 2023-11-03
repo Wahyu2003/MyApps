@@ -1,7 +1,7 @@
-package com.Try.MyApps.network
+package com.Try.MyApps.data.network
 
-import com.Try.MyApps.model.GitHubUser
-import com.Try.MyApps.model.ResponseUser
+import com.Try.MyApps.data.model.GitHubUser
+import com.Try.MyApps.data.model.ResponseUser
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call

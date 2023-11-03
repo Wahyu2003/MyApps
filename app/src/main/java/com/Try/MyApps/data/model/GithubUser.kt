@@ -1,4 +1,4 @@
-package com.Try.MyApps.model
+package com.Try.MyApps.data.model
 
 data class GitHubUser(
     val login: String,
