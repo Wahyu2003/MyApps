@@ -17,14 +17,21 @@
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".SignInActivity"
+            android:name=".MotionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenn"
             android:exported="true"
-            android:label="@string/app_name">
+            android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".SignInActivity"
+            android:exported="true">
         </activity>
         <activity
             android:name=".MainActivity"
