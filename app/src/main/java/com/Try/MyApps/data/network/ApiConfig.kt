@@ -1,4 +1,4 @@
-package com.Try.MyApps.network
+package com.Try.MyApps.data.network
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

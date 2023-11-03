@@ -6,6 +6,7 @@
     <string name="email">Email</string>
     <string name="avatar">image</string>
     <string name="password_hint">Password</string>
+
     -<!--    motion layout   -->
     <string name="title_menu_1">Hello!!</string>
     <string name="title_menu_2">Our Application</string>
@@ -21,5 +22,10 @@
     <string name="gambar_code_reviewer">Gambar code reviewer</string>
     <string name="gambar_alumni_terpercaya">Gambar alumni terpercaya</string>
     <string name="gambar_dicoding">Gambar dicoding</string>
+
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="favorite">Favorite</string>
+    <string name="setting">Setting</string>
 
 </resources>

@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.devtools.ksp")
     id("kotlin-parcelize")
+    id("kotlin-kapt")
     id("com.google.gms.google-services")
     id("androidx.navigation.safeargs")
 }
@@ -18,7 +19,11 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+        buildConfigField("String", "API_URL", "https://api.github.com/")
+        buildConfigField("String", "TOKEN", "token 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")
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -40,10 +45,32 @@ android {
     buildFeatures {
         viewBinding = true
         dataBinding = true
+        buildConfig = true
     }
 }
 
 dependencies {
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+
+    val lifecycle_version = "2.6.2"
+
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version")
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version")
+    kapt ("androidx.lifecycle:lifecycle-compiler:$lifecycle_version")
+    implementation ("androidx.lifecycle:lifecycle-common-java8:$lifecycle_version")
+
+    implementation("io.coil-kt:coil:1.4.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
+    implementation("androidx.datastore:datastore-preferences-core:1.0.0")
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+    implementation("androidx.room:room-runtime:2.5.0")
+    annotationProcessor("androidx.room:room-compiler:2.5.0")
+
+
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.cardview:cardview:1.0.0")
@@ -67,7 +94,6 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-
     implementation("com.squareup.picasso:picasso:2.71828")
     implementation("com.github.bumptech.glide:glide:4.11.0")
 
@@ -82,8 +108,6 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
     debugImplementation("com.github.chuckerteam.chucker:library:3.3.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
     implementation("androidx.annotation:annotation:1.7.0")
     implementation ("com.google.android.material:material:1.4.0")
 
